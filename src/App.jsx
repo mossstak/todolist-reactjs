@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { React } from 'react'
-import { TodoWrapper } from './Components/todoWrapper'
+import { TodoWrapper } from './Components/TodoWrapper'
 import './App.css'
 
 function App() {
