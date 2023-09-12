@@ -2,9 +2,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { TodoForm } from "./todoForm";
-import { Todo } from "./todo";
-import { EditTodoForm } from "./editTodoForm";
+import { TodoForm } from "./TodoForm";
+import { Todo } from "./Todo";
+import { EditTodoForm } from "./EditTodoForm";
 import "../App.css";
 
 const LOCAL_STORAGE_KEY = "todoApp.todos";
