@@ -12,11 +12,12 @@ export const EditTodoForm = ({ editTodo, task }) => {
     editTodo(value, task.id);
   };
   return (
-    <div>
+    <div className="flex justify-center items-center">
       {/* Edit Task Form */}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex gap-3">
         <input
           type="text"
+          className="outline outline-3 rounded p-2"
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Edit Task"
