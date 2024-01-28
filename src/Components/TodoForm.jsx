@@ -1,9 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faTrash,
+} from '@fortawesome/free-solid-svg-icons'
 import '../App.css'
 
-export const TodoForm = ({ addTodo }) => {
+export const TodoForm = ({ addTodo, removeAllTodos }) => {
   const [value, setValue] = useState('')
 
   const handleSubmit = (e) => {
@@ -28,10 +32,11 @@ export const TodoForm = ({ addTodo }) => {
         />
         <button
           type="submit"
-          className="bg-gray-300 outline rounded w-[100px] h-[50px] focus:outline-2 hover:bg-gray-400"
+          className="font-bold bg-gray-300 outline rounded w-[100px] h-[50px] focus:outline-2 hover:bg-gray-400"
         >
           Add Task
         </button>
+        <button onClick={() => removeAllTodos()} className='font-bold bg-gray-300 outline rounded w-[100px] h-[50px] focus:outline-2 hover:bg-gray-400'>Remove All</button>
       </form>
     </div>
   )

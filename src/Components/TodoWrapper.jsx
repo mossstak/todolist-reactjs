@@ -41,6 +41,10 @@ export const TodoWrapper = () => {
     setTodos(todos.filter((todo) => todo.id !== id))
   }
 
+  const removeAllTodos = (id) => {
+    setTodos([]);
+  }
+
   const completeTodo = (id) => {
     setTodos(
       todos.map((todo) =>
@@ -76,12 +80,12 @@ export const TodoWrapper = () => {
   }
 
   return (
-    <div className='h-[100vh] bg-gray-300'>
-      <p className="md:text-[24pt] text-center">
+    <div className='h-[100vh] p-5 bg-gray-300'>
+      <p className="text-[20pt] md:text-[24pt] text-center">
         Mostak's List of things To do!
       </p>
       <div className="m-2">
-        <TodoForm addTodo={addTodos} />
+        <TodoForm addTodo={addTodos} removeAllTodos={removeAllTodos}/>
         {/*Display Todos*/}
         <div className="">
           {todos.map((todo) =>
@@ -90,7 +94,6 @@ export const TodoWrapper = () => {
             ) : (
               <li key={todo.id} className="list-none">
                 <Todo
-                  className=""
                   task={todo}
                   removeTodo={removeTodos}
                   editTodo={editTodo}

@@ -22,7 +22,7 @@ export const Todo = ({
       <p
         className={`${
           task.completed ? 'line-through font-bold bg-green-500 outline-3 outline-dashed outline-black' : ''
-        } cursor-pointer w-[100vw] h-[50px] flex justify-center items-center rounded-[30px] outline-3 outline outline-black ${
+        } cursor-pointer w-[100vw] h-[50px] flex justify-center items-center rounded-[30px] hover:bg-gray-100 outline-3 outline outline-black ${
           task.important ? 'bg-orange-500' : ''
         }`}
         onClick={() => toggleComplete(task.id)}
